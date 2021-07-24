@@ -14,3 +14,13 @@ $darkGray: hsl(0, 0%, 59%);
 html {
     font-size: 62.5%;
 }
+
+.banner {
+    background-image: url('../images/pattern-bg.png');
+    background-size: cover;
+    background-position: center;
+    height: 30rem;
+    @media(min-width: 768px) {
+        height: 28rem;
+    }
+}
