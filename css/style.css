@@ -107,4 +107,32 @@ body {
 .banner .ip-form .search-btn:focus {
   outline: none;
 }
+
+.banner .ip-info {
+  background: white;
+  width: 87.2%;
+  max-width: 111rem;
+  margin: 0 auto;
+  padding-top: 2.6rem;
+  border-radius: 1.5rem;
+}
+
+.banner .ip-info .info-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.185rem;
+  letter-spacing: 0.146rem;
+  padding-bottom: 0.7rem;
+  color: #969696;
+}
+
+.banner .ip-info .info-text {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.018rem;
+  padding-bottom: 2.5rem;
+  color: #2b2b2b;
+}
 /*# sourceMappingURL=style.css.map */

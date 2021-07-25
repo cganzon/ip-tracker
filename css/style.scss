@@ -88,4 +88,31 @@ body {
             }
         }
     }
+
+    .ip-info {
+        background: hsl(0, 0%, 100%);
+        width: 87.2%;
+        max-width: 111rem;
+        margin: 0 auto;
+        padding-top: 2.6rem;
+        border-radius: 1.5rem;
+        .info-title {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 1.185rem;
+            letter-spacing: 0.146rem;
+            padding-bottom: 0.7rem;
+            color: $darkGray;
+        }
+
+        .info-text {
+            font-weight: 500;
+            font-size: 2rem;
+            line-height: 2.4rem;
+            letter-spacing: -0.018rem;
+            padding-bottom: 2.5rem;
+            color: $veryDarkGray;
+        }
+    }
 }
