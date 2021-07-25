@@ -102,6 +102,19 @@ body {
             grid-template-columns: repeat(4, 1fr);
             .wrapper {
                 margin: 0 3.2rem;
+                position: relative;
+            }
+
+            .wrapper:nth-of-type(2)::before,
+            .wrapper:nth-of-type(3)::before,
+            .wrapper:nth-of-type(4)::before {
+                content: '';
+                width: 0.1rem;
+                height: 7.5rem;
+                position: absolute;
+                left: -3.2rem;
+                top: 0.5rem;
+                background: hsla(0, 0%, 0%, 0.15);
             }
         }
 
