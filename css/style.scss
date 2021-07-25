@@ -96,6 +96,15 @@ body {
         margin: 0 auto;
         padding-top: 2.6rem;
         border-radius: 1.5rem;
+        @media(min-width: 768px) {
+            padding-top: 3.7rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            .wrapper {
+                margin: 0 3.2rem;
+            }
+        }
+
         .info-title {
             text-transform: uppercase;
             font-weight: 700;
@@ -104,6 +113,17 @@ body {
             letter-spacing: 0.146rem;
             padding-bottom: 0.7rem;
             color: $darkGray;
+            @media(min-width: 768px) {
+                text-align: start;
+            }
+
+            @media(min-width: 900px) {
+                text-align: start;
+                font-size: 1.2rem;
+                line-height: 1.422rem;
+                letter-spacing: 0.175rem;
+                padding-bottom: 1.3rem;
+            }
         }
 
         .info-text {
@@ -113,6 +133,17 @@ body {
             letter-spacing: -0.018rem;
             padding-bottom: 2.5rem;
             color: $veryDarkGray;
+            @media(min-width: 768px) {
+                text-align: start;
+            }
+
+            @media(min-width: 900px) {
+                text-align: start;
+                font-size: 2.6rem;
+                line-height: 3rem;
+                letter-spacing: -0.023rem;
+                padding-bottom: 3.7rem;
+            }
         }
     }
 }
