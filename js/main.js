@@ -20,4 +20,10 @@ const displayInfo = (ipAddress, city, country, postalCode, timezone, isp) => {
     $('.isp').text(isp);
 };
 
+$('.search-btn').click(e => {
+    e.preventDefault();
+    let searchValue = $('.ip-input').val().trim();
+    getIpInfo(searchValue);
+});
+
 getIpInfo();
