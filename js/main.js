@@ -7,9 +7,17 @@ const getIpInfo = (ipAddress = '') => {
            data: {apiKey: api_key, ipAddress: ip},
            success: data => {
             console.log(data);
+            displayInfo(data.ip, data.location.city, data.location.country, data.location.postalCode, data.location.timezone, data.isp);
            }
        });
     });
+};
+
+const displayInfo = (ipAddress, city, country, postalCode, timezone, isp) => {
+    $('.ip-address').text(ipAddress);
+    $('.location').text(`${city}, ${country} ${postalCode}`);
+    $('.timezone-value').text(timezone);
+    $('.isp').text(isp);
 };
 
 getIpInfo();
