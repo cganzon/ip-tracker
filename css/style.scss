@@ -25,6 +25,7 @@ body {
     background-size: cover;
     background-position: center;
     height: 30rem;
+    position: relative;
     @media(min-width: 768px) {
         height: 28rem;
     }
@@ -96,6 +97,10 @@ body {
         margin: 0 auto;
         padding-top: 2.6rem;
         border-radius: 1.5rem;
+        position: absolute;
+        z-index: 1000;
+        left: 50%;
+        transform: translateX(-50%);
         @media(min-width: 768px) {
             padding-top: 3.7rem;
             display: grid;
