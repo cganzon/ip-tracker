@@ -160,3 +160,10 @@ body {
         }
     }
 }
+
+#map {
+    height: 52.8rem;
+    @media(min-width: 768px) {
+        height: 52rem;
+    }
+}

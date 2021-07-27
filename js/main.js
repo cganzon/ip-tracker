@@ -8,6 +8,7 @@ const getIpInfo = (ipAddress = '') => {
            success: data => {
             console.log(data);
             displayInfo(data.ip, data.location.city, data.location.country, data.location.postalCode, data.location.timezone, data.isp);
+            showMap(data.location.lat, data.location.lng);
            }
        });
     });
@@ -20,10 +21,24 @@ const displayInfo = (ipAddress, city, country, postalCode, timezone, isp) => {
     $('.isp').text(isp);
 };
 
+let map = L.map('map');
+
+const showMap = (latitude, longitude) => {
+    map.setView([latitude, longitude], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker([latitude, longitude]).addTo(map)
+        .openPopup();
+}
+
 $('.search-btn').click(e => {
     e.preventDefault();
     let searchValue = $('.ip-input').val().trim();
     getIpInfo(searchValue);
+
 });
 
 getIpInfo();

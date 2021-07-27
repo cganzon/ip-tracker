@@ -192,4 +192,14 @@ body {
     padding-bottom: 3.7rem;
   }
 }
+
+#map {
+  height: 52.8rem;
+}
+
+@media (min-width: 768px) {
+  #map {
+    height: 52rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
