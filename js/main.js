@@ -26,19 +26,16 @@ map.zoomControl.remove();
 
 const showMap = (latitude, longitude) => {
     map.setView([latitude, longitude], 13);
-
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
-
     let customMarker = L.icon({
         iconUrl: '../images/icon-location.svg',
         iconSize: [46, 56],
         iconAnchor: [23, 56]
     });
-
     L.marker([latitude, longitude], {icon: customMarker}).addTo(map);
-}
+};
 
 $('.search-btn').click(e => {
     e.preventDefault();
