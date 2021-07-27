@@ -22,6 +22,7 @@ const displayInfo = (ipAddress, city, country, postalCode, timezone, isp) => {
 };
 
 let map = L.map('map');
+map.zoomControl.remove();
 
 const showMap = (latitude, longitude) => {
     map.setView([latitude, longitude], 13);
