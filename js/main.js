@@ -31,15 +31,19 @@ const showMap = (latitude, longitude) => {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    L.marker([latitude, longitude]).addTo(map)
-        .openPopup();
+    let customMarker = L.icon({
+        iconUrl: '../images/icon-location.svg',
+        iconSize: [46, 56],
+        iconAnchor: [23, 56]
+    });
+
+    L.marker([latitude, longitude], {icon: customMarker}).addTo(map);
 }
 
 $('.search-btn').click(e => {
     e.preventDefault();
     let searchValue = $('.ip-input').val().trim();
     getIpInfo(searchValue);
-
 });
 
 getIpInfo();
