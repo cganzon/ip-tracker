@@ -15,6 +15,7 @@ html {
 body {
   font-family: 'Rubik', sans-serif;
   text-align: center;
+  height: 100vh;
 }
 
 .banner {
@@ -200,12 +201,13 @@ body {
 }
 
 #map {
-  height: 52.8rem;
+  height: calc(100% - 30rem);
+  min-height: 50rem;
 }
 
 @media (min-width: 768px) {
   #map {
-    height: 52rem;
+    height: calc(100% - 28rem);
   }
 }
 /*# sourceMappingURL=style.css.map */
