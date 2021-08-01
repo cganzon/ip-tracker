@@ -7,16 +7,20 @@ const getIpInfo = (ipAddress = '') => {
            data: {apiKey: api_key, ipAddress: ip},
            success: data => {
             console.log(data);
-            displayInfo(data.ip, data.location.city, data.location.country, data.location.postalCode, data.location.timezone, data.isp);
+            displayInfo(data.ip, data.location.city, data.location.region, data.location.country, data.location.postalCode, data.location.timezone, data.isp);
             showMap(data.location.lat, data.location.lng);
            }
        });
     });
 };
 
-const displayInfo = (ipAddress, city, country, postalCode, timezone, isp) => {
+const displayInfo = (ipAddress, city, state, country, postalCode, timezone, isp) => {
+    if(country === 'US') {
+        $('.location').text(`${city}, ${state} ${postalCode}`)
+    } else {
+        $('.location').text(`${city}, ${country} ${postalCode}`);
+    }
     $('.ip-address').text(ipAddress);
-    $('.location').text(`${city}, ${country} ${postalCode}`);
     $('.timezone-value').text(timezone);
     $('.isp').text(isp);
 };
