@@ -25,6 +25,11 @@ const displayInfo = (ipAddress, city, state, country, postalCode, timezone, isp)
     $('.isp').text(isp);
 };
 
+const validateIp = (ip) => {
+    let validator = /^(?=\d+\.\d+\.\d+\.\d+$)(?:(?:25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\.?){4}$/;
+    return validator.test(ip);
+};
+
 let map = L.map('map');
 map.zoomControl.remove();
 
@@ -44,7 +49,11 @@ const showMap = (latitude, longitude) => {
 $('.search-btn').click(e => {
     e.preventDefault();
     let searchValue = $('.ip-input').val().trim();
-    getIpInfo(searchValue);
+    if(searchValue === '' || !validateIp(searchValue)) {
+        console.log('Please enter a valid IP address');
+    } else {
+        getIpInfo(searchValue);
+    }
 });
 
 getIpInfo();
