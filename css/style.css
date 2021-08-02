@@ -141,10 +141,10 @@ body {
   .banner .ip-info .wrapper:nth-of-type(4)::before {
     content: '';
     width: 0.1rem;
-    height: 7.5rem;
+    height: 65%;
     position: absolute;
     left: -3.2rem;
-    top: 0.5rem;
+    top: 0rem;
     background: rgba(0, 0, 0, 0.15);
   }
 }
