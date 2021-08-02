@@ -9,41 +9,43 @@
   <link rel="stylesheet" href="./css/style.css">
   <title>Frontend Mentor | IP Address Tracker</title>
 </head>
-<body role="main">
-  <header class="banner">
-    <h1 class="title">IP Address Tracker</h1>
-    <form class="ip-form">
-      <input type="text" class="ip-input" placeholder="Search for any IP address or domain">
-      <button class="search-btn" aria-label="search ip button"><span class="btn-text">Search IP</span><img src="./images/icon-arrow.svg" alt="" class="arrow"></button>
-      <svg class="error" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><g fill="none" fill-rule="evenodd"><circle cx="12" cy="12" r="12" fill="#F96464"/><path fill="#FFF" fill-rule="nonzero" d="M13.256 6v9.056h-2V6h2zm-.944 12.464c-.384 0-.699-.104-.944-.312a1.027 1.027 0 0 1-.368-.824c0-.33.125-.608.376-.832.25-.224.563-.336.936-.336.373 0 .68.112.92.336.24.224.36.501.36.832 0 .341-.117.616-.352.824-.235.208-.544.312-.928.312z"/></g></svg>
-    </form>
-
-    <section class="ip-info">
-      <div class="wrapper">
-        <h2 class="info-title">IP Address</h2>
-        <p class="info-text ip-address">192.212.174.101</p>
-      </div>
-      <div class="wrapper">
-        <h2 class="info-title">Location</h2>
-        <p class="info-text location">Brooklyn, NY 10001</p>
-      </div>
-      <div class="wrapper">
-        <h2 class="info-title">Timezone</h2>
-        <p class="info-text timezone">UTC <span class="timezone-value">-5:00</span></p>
-      </div>
-      <div class="wrapper">
-        <h2 class="info-title">ISP</h2>
-        <p class="info-text isp">SpaceX Starlink</p>
-      </div>
-    </section>
-  </header>
-
-  <div id="map"></div>
+<body>
+  <main>
+    <header class="banner">
+      <h1 class="title">IP Address Tracker</h1>
+      <form class="ip-form">
+        <input type="text" class="ip-input" placeholder="Search for any IP address or domain">
+        <button class="search-btn" aria-label="search ip button"><span class="btn-text">Search IP</span><img src="./images/icon-arrow.svg" alt="" class="arrow"></button>
+        <svg class="error" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><g fill="none" fill-rule="evenodd"><circle cx="12" cy="12" r="12" fill="#F96464"/><path fill="#FFF" fill-rule="nonzero" d="M13.256 6v9.056h-2V6h2zm-.944 12.464c-.384 0-.699-.104-.944-.312a1.027 1.027 0 0 1-.368-.824c0-.33.125-.608.376-.832.25-.224.563-.336.936-.336.373 0 .68.112.92.336.24.224.36.501.36.832 0 .341-.117.616-.352.824-.235.208-.544.312-.928.312z"/></g></svg>
+      </form>
   
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+      <section class="ip-info">
+        <div class="wrapper">
+          <h2 class="info-title">IP Address</h2>
+          <p class="info-text ip-address">192.212.174.101</p>
+        </div>
+        <div class="wrapper">
+          <h2 class="info-title">Location</h2>
+          <p class="info-text location">Brooklyn, NY 10001</p>
+        </div>
+        <div class="wrapper">
+          <h2 class="info-title">Timezone</h2>
+          <p class="info-text timezone">UTC <span class="timezone-value">-5:00</span></p>
+        </div>
+        <div class="wrapper">
+          <h2 class="info-title">ISP</h2>
+          <p class="info-text isp">SpaceX Starlink</p>
+        </div>
+      </section>
+    </header>
+  
+    <div id="map"></div>
+    
+    <!-- <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </main>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
