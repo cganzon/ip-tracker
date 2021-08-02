@@ -89,6 +89,10 @@ body {
             &:focus {
                 outline: none;
             }
+
+            .btn-text {
+                display: none;
+            }
         }
 
         .error {

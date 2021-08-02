@@ -111,6 +111,10 @@ body {
   outline: none;
 }
 
+.banner .ip-form .search-btn .btn-text {
+  display: none;
+}
+
 .banner .ip-form .error {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
