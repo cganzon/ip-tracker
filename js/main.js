@@ -6,7 +6,7 @@ const getIpInfo = (ipAddress = '') => {
            url: "https://geo.ipify.org/api/v1",
            data: {apiKey: api_key, ipAddress: ip},
            success: data => {
-            console.log(data);
+            // console.log(data);
             displayInfo(data.ip, data.location.city, data.location.region, data.location.country, data.location.postalCode, data.location.timezone, data.isp);
             showMap(data.location.lat, data.location.lng);
            }
@@ -50,8 +50,9 @@ $('.search-btn').click(e => {
     e.preventDefault();
     let searchValue = $('.ip-input').val().trim();
     if(searchValue === '' || !validateIp(searchValue)) {
-        console.log('Please enter a valid IP address');
+        $('.error').addClass('display');
     } else {
+        $('.error').removeClass('display');
         getIpInfo(searchValue);
     }
 });
