@@ -36,7 +36,7 @@ map.zoomControl.remove();
 const showMap = (latitude, longitude) => {
     map.setView([latitude, longitude], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors | Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> | Coded by <a href="https://github.com/cganzon" target="_blank">Cezar Ganzon</a>'
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
     let customMarker = L.icon({
         iconUrl: './images/icon-location.svg',
